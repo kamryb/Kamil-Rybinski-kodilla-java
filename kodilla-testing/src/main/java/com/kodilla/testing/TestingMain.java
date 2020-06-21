@@ -4,8 +4,7 @@ import com.kodilla.testing.user.SimpleUser;
 import com.kodilla.testing.calculator.Calculator;
 
 public class TestingMain {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         SimpleUser simpleUser = new SimpleUser("theForumUser");
 
         String result = simpleUser.getUsername();
@@ -23,11 +22,11 @@ public class TestingMain {
         int resSub = calc.subtract(20,4);
 
         if(resAdd==24) {
-                System.out.println("Calc-add working ok");
-            }
-            else {
-                System.out.println("Calc-add NO-working");
-            }
+            System.out.println("Calc-add working ok");
+        }
+        else {
+            System.out.println("Calc-add NO-working");
+        }
 
         if(resSub==16) {
             System.out.println("Calc-subs working ok");
@@ -36,7 +35,5 @@ public class TestingMain {
             System.out.println("Calc-subs NO-working ok");
         }
 
-
-
-     }
+    }
 }
