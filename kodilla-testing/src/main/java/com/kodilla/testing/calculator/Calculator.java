@@ -6,7 +6,6 @@ public class Calculator {
     public Calculator(){
         this.a=a;
         this.b=b;
-
     }
 
     public int subtract(int a, int b) {
