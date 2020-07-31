@@ -25,7 +25,7 @@ public class TestingMain {
         }
         else {
             System.out.println("Calc-subs NO-working ok");
->>>>>>> 71a083e7363d5c59557df5762cf3548392bf22fb
+
         }
 
     }
