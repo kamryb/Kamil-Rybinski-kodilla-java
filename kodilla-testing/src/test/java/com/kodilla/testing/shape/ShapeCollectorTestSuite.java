@@ -4,6 +4,8 @@ import com.kodilla.testing.shape.Square;
 import com.kodilla.testing.shape.Triangle;
 import org.junit.*;
 
+import java.util.ArrayList;
+
 //Test suite for classes of Shape
 public class ShapeCollectorTestSuite {
     private static int testCounter = 0;
@@ -29,7 +31,7 @@ public class ShapeCollectorTestSuite {
 //test1
     public void testAddFigure() {
         //Given
-        ArrayList<Shape> test1 = new ArrayList<>();
+        ArrayList<Shape> test1 = new ArrayList<Shape>();
         Square square = new Square("kwadrat","15mm2");
         Triangle triangle = new Triangle("trojkat","20mm2");
         Circle circle = new Circle("kolo","piR2");
@@ -50,7 +52,8 @@ public class ShapeCollectorTestSuite {
 
     public void testRemoveFigure() {
         //Given
-        ArrayList<Shape> test2 = new ArrayList<>();
+        ArrayList<Shape> test2;
+        test2 = new ArrayList<Shape>();
         Square square = new Square("kwadrat","15mm2");
         Triangle triangle = new Triangle("trojkat","20mm2");
         Circle circle = new Circle("kolo","piR2");
@@ -79,11 +82,11 @@ public class ShapeCollectorTestSuite {
         Circle circle = new Circle("kolo","piR2");
 
 //when
-        test3.add(Square);
-        test3.add(Triangle);
-        test3.add(Circle);
+        test3.add(square);
+        test3.add(triangle);
+        test3.add(circle);
 
 //Then
-        Assert.assertEquals(Square, test3.get(0));
+        Assert.assertEquals(square, test3.get(0));
     }
 }
