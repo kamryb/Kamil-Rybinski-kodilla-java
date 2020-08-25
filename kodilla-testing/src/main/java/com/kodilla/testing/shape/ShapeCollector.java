@@ -28,8 +28,9 @@ public class ShapeCollector<S> {
         geometric.remove(shape);
     }
 
-    public void getFigure(int n) {
-        geometric.get(n);
+    public Shape getFigure(int n) {
+        Shape shape = geometric.get(n);
+        return shape;
     }
 
    // @Override

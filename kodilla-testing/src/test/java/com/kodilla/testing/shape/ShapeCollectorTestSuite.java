@@ -51,19 +51,18 @@ public class ShapeCollectorTestSuite {
 
     public void testRemoveFigure() {
         //Given
-        ArrayList<Shape> test2;
-        test2 = new ArrayList<Shape>();
+        ShapeCollector test2 = new ShapeCollector();
         Square square = new Square("kwadrat","15mm2");
         Triangle triangle = new Triangle("trojkat","20mm2");
         Circle circle = new Circle("kolo","piR2");
 
 //when
-        test2.add(square);
-        test2.add(triangle);
-        test2.add(circle);
+        test2.addFigure(square);
+        test2.addFigure(triangle);
+        test2.addFigure(circle);
 
-        test2.remove(square);
-        test2.remove(triangle);
+        test2.removeFigure(square);
+        test2.removeFigure(triangle);
 
 
 //Then
@@ -75,17 +74,17 @@ public class ShapeCollectorTestSuite {
 
     public void testGetFigure() {
         //Given
-        ArrayList<Shape> test3 = new ArrayList<>();
+        ShapeCollector test3 = new ShapeCollector();
         Square square = new Square("kwadrat","15mm2");
         Triangle triangle = new Triangle("trojkat","20mm2");
         Circle circle = new Circle("kolo","piR2");
 
 //when
-        test3.add(square);
-        test3.add(triangle);
-        test3.add(circle);
+        test3.addFigure(square);
+        test3.addFigure(triangle);
+        test3.addFigure(circle);
 
 //Then
-        Assert.assertEquals(square, test3.get(0));
+        Assert.assertEquals(circle, test3.getFigure(test3.size()-1));
     }
 }
