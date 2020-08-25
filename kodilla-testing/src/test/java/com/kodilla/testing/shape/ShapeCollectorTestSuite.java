@@ -1,7 +1,4 @@
-import com.kodilla.testing.shape.Circle;
-import com.kodilla.testing.shape.Shape;
-import com.kodilla.testing.shape.Square;
-import com.kodilla.testing.shape.Triangle;
+import com.kodilla.testing.shape.*;
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -31,16 +28,18 @@ public class ShapeCollectorTestSuite {
 //test1
     public void testAddFigure() {
         //Given
-        ArrayList<Shape> test1 = new ArrayList<Shape>();
+        ShapeCollector test1 = new ShapeCollector();
         Square square = new Square("kwadrat","15mm2");
         Triangle triangle = new Triangle("trojkat","20mm2");
         Circle circle = new Circle("kolo","piR2");
 
 //when
 
-        test1.add(square);
-        test1.add(triangle);
-        test1.add(circle);
+        test1.addFigure(square);
+        test1.addFigure(triangle);
+        test1.addFigure(circle);
+  //     test1.add(triangle);
+  //      test1.add(circle);
 
 //Then
         Assert.assertEquals(3, test1.size());

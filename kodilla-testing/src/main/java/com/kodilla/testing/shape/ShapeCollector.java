@@ -2,7 +2,7 @@ package com.kodilla.testing.shape;
 
 import java.util.ArrayList;
 
-public class ShapeCollector {
+public class ShapeCollector<S> {
 
    private Shape shape;
 
@@ -12,6 +12,9 @@ public class ShapeCollector {
 
     public ShapeCollector(ArrayList<Shape> geometric) {
       this.geometric = geometric;
+    }
+    public ShapeCollector() {
+
     }
 
     public void addFigure(Shape shape){
@@ -27,6 +30,11 @@ public class ShapeCollector {
 
     public void getFigure(int n) {
         geometric.get(n);
+    }
+
+   // @Override
+     public int size(){
+         return geometric.size();
     }
 
 
