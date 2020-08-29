@@ -28,15 +28,36 @@ public class StatisticsCounter {
     }
 
     // List<String> usersNames()
-    int userNumber;
-    int postNumber;
-    int commentNumber;
-    int avgPostFor1User;
-    int avgCoommentFor1User;
-    int avgCommentForPost;
+    private int userNumber;
+    private int postNumber;
+    private int commentNumber;
+    private int avgPostFor1User;
+    private int avgCoommentFor1User;
+    private int avgCommentForPost;
 
+    public int getUserNumber() {
+        return userNumber;
+    }
 
+    public int getPostNumber() {
+        return postNumber;
+    }
 
+    public int getCommentNumber() {
+        return commentNumber;
+    }
+
+    public int getAvgPostFor1User() {
+        return avgPostFor1User;
+    }
+
+    public int getAvgCoommentFor1User() {
+        return avgCoommentFor1User;
+    }
+
+    public int getAvgCommentForPost() {
+        return avgCommentForPost;
+    }
 
 
     //  showStatistics()

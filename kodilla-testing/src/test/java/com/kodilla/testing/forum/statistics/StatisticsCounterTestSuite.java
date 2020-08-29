@@ -33,7 +33,7 @@ public class StatisticsCounterTestSuite {
         statisticsCounter.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(0, statisticsCounter.postNumber);
+        Assert.assertEquals(0, statisticsCounter.getPostNumber());
 
     }
 
@@ -54,7 +54,7 @@ public class StatisticsCounterTestSuite {
         statisticsCounter.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(1000, statisticsCounter.postNumber);
+        Assert.assertEquals(1000, statisticsCounter.getPostNumber());
 
     }
 
@@ -78,7 +78,7 @@ public class StatisticsCounterTestSuite {
         statisticsCounter.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(0, statisticsCounter.commentNumber);
+        Assert.assertEquals(0, statisticsCounter.getCommentNumber());
 
     }
 
@@ -100,7 +100,7 @@ public class StatisticsCounterTestSuite {
         //When
         boolean result;
         statisticsCounter.calculateAdvStatistics(statisticsMock);
-        if(statisticsCounter.commentNumber<statisticsCounter.postNumber){
+        if(statisticsCounter.getCommentNumber()<statisticsCounter.getPostNumber()){
             result =true;
         }
         else {
@@ -128,7 +128,7 @@ public class StatisticsCounterTestSuite {
         //When
         boolean result;
         statisticsCounter.calculateAdvStatistics(statisticsMock);
-        if(statisticsCounter.commentNumber>statisticsCounter.postNumber){
+        if(statisticsCounter.getCommentNumber()>statisticsCounter.getPostNumber()){
             result =true;
         }
         else {
@@ -155,7 +155,7 @@ public class StatisticsCounterTestSuite {
         statisticsCounter.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(0, statisticsCounter.userNumber);
+        Assert.assertEquals(0, statisticsCounter.getUserNumber());
 
     }
 
@@ -182,7 +182,7 @@ public class StatisticsCounterTestSuite {
         statisticsCounter.calculateAdvStatistics(statisticsMock);
 
         //Then
-        Assert.assertEquals(100, statisticsCounter.userNumber);
+        Assert.assertEquals(100, statisticsCounter.getUserNumber());
 
     }
 }
