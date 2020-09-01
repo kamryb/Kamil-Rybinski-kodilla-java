@@ -1,7 +1,5 @@
 package com.kodilla.testing.library;
 
-import java.awt.*;
-
 public class LibraryUser {
 
     String firstname;
@@ -14,6 +12,9 @@ public class LibraryUser {
         this.peselId = peselId;
     }
 
+    public int numerOfBooksHad(int numberOfBook){
+        return numberOfBook;
+    }
     public String getFirstname() {
         return firstname;
     }
