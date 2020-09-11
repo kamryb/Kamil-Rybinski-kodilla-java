@@ -1,8 +1,6 @@
 package com.kodilla.stream.forumuser;
 
 
-import com.kodilla.stream.book.Book;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.time.*;
