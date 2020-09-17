@@ -17,7 +17,7 @@ public class World {
         return theWorldList.stream()
                 .flatMap(continent -> continent.theContinetList.getList())
                 .collect(Collectors.toList())
-                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));git
 
     }
 }
