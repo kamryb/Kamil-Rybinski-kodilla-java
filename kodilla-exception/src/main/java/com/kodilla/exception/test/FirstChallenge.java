@@ -1,11 +1,13 @@
 package com.kodilla.exception.test;
 
-import java.util.stream.Stream;
 
 public class FirstChallenge {
 
     public double divide(double a, double b) throws ArithmeticException {
-        return  a/b;
+       if(b==0) {
+           throw new ArithmeticException();
+       }
+        return a / b;
     }
 
 
@@ -23,6 +25,8 @@ public class FirstChallenge {
             System.out.println(result);
 
         } catch (ArithmeticException e) {
+
+                System.out.println("Nie dzielimy przez 0 "+ e);
 
         }finally {
             System.out.println("Info- this is only program");
