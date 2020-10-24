@@ -24,7 +24,8 @@ public class CalculatorTestSuite {
         double sub = calculator.sub(a,b);
         double mul = calculator.mul(a,b);
         double div = calculator.div(a,b);
-        //Then
+
+        //Thengit
         Assert.assertEquals(3,add,0);
         Assert.assertEquals(1,sub,0);
         Assert.assertEquals(2,mul,0);
