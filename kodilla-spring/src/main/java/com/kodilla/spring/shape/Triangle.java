@@ -1,4 +1,2 @@
-package com.kodilla.spring.shape;
-
-public class Triangle {
+package com.kodilla.spring.shape;public class Triangle {
 }

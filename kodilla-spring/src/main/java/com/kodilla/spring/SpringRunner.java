@@ -1,4 +1,2 @@
-package com.kodilla.spring;
-
-public class SpringRunner {
+package com.kodilla.spring;public class SpringRunner {
 }

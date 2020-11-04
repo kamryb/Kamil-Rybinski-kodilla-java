@@ -1,12 +1,2 @@
-package com.kodilla.spring.forum;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class ForumUser {
-    final String username;
-
-    public ForumUser(){
-        this.username = "John Smith";
-    }
+package com.kodilla.spring.forum;public class ForumUser {
 }

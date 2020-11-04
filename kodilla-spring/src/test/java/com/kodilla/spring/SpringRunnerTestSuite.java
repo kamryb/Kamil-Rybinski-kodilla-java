@@ -1,4 +1,2 @@
-package com.kodilla.spring;
-
-public class SpringRunnerTestSuite {
+package com.kodilla.spring;public class SpringRunnerTestSuite {
 }

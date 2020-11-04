@@ -1,4 +1,2 @@
-package com.kodilla.spring.shape;
-
-public interface Shape {
+package com.kodilla.spring.shape;public interface Shape {
 }
