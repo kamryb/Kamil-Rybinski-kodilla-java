@@ -7,9 +7,13 @@ import java.util.List;
 public class TaskList {
 
 
-    List<String> tasks;
+    private List<String> tasks;
 
     public TaskList(){
-        tasks = new ArrayList<>();
+        this.tasks = new ArrayList<>();
+    }
+
+    public List<String> getTasks() {
+        return tasks;
     }
 }

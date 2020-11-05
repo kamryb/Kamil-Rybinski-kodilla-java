@@ -21,9 +21,9 @@ public class BoardTestSuite {
     toDoList.addDoneTask("Task2");
     toDoList.addProgressTask("Task3");
 
-    int size1 = toDoList.getToDoList().tasks.size();
-    int size2 = toDoList.getDoneList().tasks.size();
-    int size3 = toDoList.getInProgressList().tasks.size();
+    int size1 = toDoList.getToDoList().getTasks().size();
+    int size2 = toDoList.getDoneList().getTasks().size();
+    int size3 = toDoList.getInProgressList().getTasks().size();
 
         Assert.assertEquals(1, size1);
         Assert.assertEquals(1, size2);

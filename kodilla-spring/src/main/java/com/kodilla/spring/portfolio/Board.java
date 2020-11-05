@@ -17,15 +17,15 @@ public class Board {
     }
 
     public void addDoTask(String task) {
-         this.toDoList.tasks.add(task);
+         this.toDoList.getTasks().add(task);
     }
 
     public void addProgressTask(String task) {
-        this.inProgressList.tasks.add(task);
+        this.inProgressList.getTasks().add(task);
     }
 
     public void addDoneTask(String task) {
-        this.doneList.tasks.add(task);
+        this.doneList.getTasks().add(task);
     }
 
     public TaskList getToDoList() {
