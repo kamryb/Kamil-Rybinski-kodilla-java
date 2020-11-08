@@ -3,9 +3,9 @@ package com.kodilla.patterns.factory.tasks;
 import jdk.nashorn.internal.ir.IfNode;
 
 public class DrivingTask implements Task {
-    String taskName;
-    String where;
-    String using;
+    private String taskName;
+    private String where;
+    private String using;
 
     public DrivingTask(String taskName, String where, String using) {
         this.taskName = taskName;
@@ -25,6 +25,9 @@ public class DrivingTask implements Task {
 
     @Override
     public Boolean isTaskExecuted() {
-        return true;
+        if (executeTask().isEmpty()) {
+            return false;
+        } else { return true;
+        }
     }
 }

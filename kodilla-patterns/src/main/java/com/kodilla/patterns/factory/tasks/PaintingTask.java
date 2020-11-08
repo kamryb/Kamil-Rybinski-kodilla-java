@@ -3,9 +3,10 @@ package com.kodilla.patterns.factory.tasks;
 
 
 public class PaintingTask implements Task{
-    String taskName;
-    String color;
-    String whatToPoint;
+    private String taskName;
+    private String color;
+    private String whatToPoint;
+  // private int Cunter=0;
 
     public PaintingTask(String taskName, String color, String whatToPoint) {
         this.taskName = taskName;
@@ -15,7 +16,7 @@ public class PaintingTask implements Task{
 
     @Override
     public String executeTask() {
-        return null;
+        return whatToPoint;
     }
 
     @Override
@@ -25,6 +26,9 @@ public class PaintingTask implements Task{
 
     @Override
     public Boolean isTaskExecuted() {
-        return null;
+        if (executeTask().isEmpty()) {
+            return false;
+        } else { return true;
+        }
     }
 }

@@ -22,12 +22,13 @@ public class ShoppingTask implements Task {
     }
 
     @Override
-    public Boolean isTaskExecuted( ) {
+    public Boolean isTaskExecuted() {
+        //  verify(bar, times(1)).someMethod();
+        // mokowanie i stuby
 
-        if( whatToBuy.length()!=0) {
-            return true;
+        if (executeTask().isEmpty()) {
+            return false;
+        } else { return true;
         }
-
-        else return false;
     }
 }
