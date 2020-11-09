@@ -4,6 +4,7 @@ public class ShoppingTask implements Task {
     String taskName;
     String whatToBuy;
     double quantity;
+    private Boolean executed=false;
 
     public ShoppingTask(String taskName, String whatToBuy, double quantity) {
         this.taskName = taskName;
@@ -13,6 +14,7 @@ public class ShoppingTask implements Task {
 
     @Override
     public String executeTask() {
+        executed = true;
         return whatToBuy;
     }
 
@@ -23,12 +25,6 @@ public class ShoppingTask implements Task {
 
     @Override
     public Boolean isTaskExecuted() {
-        //  verify(bar, times(1)).someMethod();
-        // mokowanie i stuby
-
-        if (executeTask().isEmpty()) {
-            return false;
-        } else { return true;
-        }
+        return executed;
     }
 }

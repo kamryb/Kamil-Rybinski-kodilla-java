@@ -6,7 +6,7 @@ public class PaintingTask implements Task{
     private String taskName;
     private String color;
     private String whatToPoint;
-  // private int Cunter=0;
+    private Boolean executed=false;
 
     public PaintingTask(String taskName, String color, String whatToPoint) {
         this.taskName = taskName;
@@ -16,6 +16,7 @@ public class PaintingTask implements Task{
 
     @Override
     public String executeTask() {
+        executed = true;
         return whatToPoint;
     }
 
@@ -26,9 +27,6 @@ public class PaintingTask implements Task{
 
     @Override
     public Boolean isTaskExecuted() {
-        if (executeTask().isEmpty()) {
-            return false;
-        } else { return true;
-        }
+       return executed;
     }
 }

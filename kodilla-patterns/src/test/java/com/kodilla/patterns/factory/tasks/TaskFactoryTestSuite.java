@@ -14,6 +14,10 @@ public class TaskFactoryTestSuite {
         Task drivingTask = factory.makeTask(TaskFactory.DrivingTask);
         Task paintingTask = factory.makeTask(TaskFactory.PaintingTask);
 
+        shoppingTask.executeTask();
+        drivingTask.executeTask();
+        paintingTask.executeTask();
+
         //Then
         Assert.assertEquals(true,shoppingTask.isTaskExecuted());
         Assert.assertEquals(true,drivingTask.isTaskExecuted());
