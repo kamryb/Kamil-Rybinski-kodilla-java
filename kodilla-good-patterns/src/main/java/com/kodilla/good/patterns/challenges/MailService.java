@@ -1,4 +1,4 @@
 package com.kodilla.good.patterns.challenges;
 
-public interface SellService {
+public class MailService {
 }
