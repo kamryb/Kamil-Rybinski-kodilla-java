@@ -31,7 +31,6 @@ public class Product {
         this.name = name;
     }
 
-
     @Id
     @GeneratedValue
     @NotNull
@@ -44,7 +43,6 @@ public class Product {
     public String getName() {
         return name;
     }
-
 
     public void setId(int id) {
         this.id = id;

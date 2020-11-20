@@ -24,8 +24,6 @@ public class InvoiceDaoTestSuite {
     private  ItemDao itemDao;
 
 
-
-
     @Test
     public void testInvoiceDaoSave(){
         //Given
@@ -45,8 +43,6 @@ public class InvoiceDaoTestSuite {
 
         item.setInvoice(invoice);
         item2.setInvoice(invoice);
-
-
 
 
         //When

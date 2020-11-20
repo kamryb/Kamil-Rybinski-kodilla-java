@@ -9,20 +9,15 @@ import java.util.List;
 @Table(name = "INVOICE")
 public class Invoice {
 
-    int id;
-    String number;
+    private int id;
+    private String number;
 
-    List<Item> items = new ArrayList<>();
-
-
+    private List<Item> items = new ArrayList<>();
 
     public Invoice(String number, List<Item> items) {
         this.number = number;
         this.items = items;
     }
-
-
-    //@One to many to Item
 
     @Id
     @GeneratedValue

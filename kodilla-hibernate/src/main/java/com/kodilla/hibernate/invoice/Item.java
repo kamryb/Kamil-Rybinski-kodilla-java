@@ -1,6 +1,5 @@
 package com.kodilla.hibernate.invoice;
 
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -21,9 +20,7 @@ public class Item {
     private BigDecimal value;
     private Invoice invoice;
 
-
     public Item() {
-
     }
 
     @OneToMany (
@@ -53,9 +50,6 @@ public class Item {
 
     public Item(Product product, double v, int quantity, int i) {
     }
-  //  @NotBlank
-
-
 
     public Item(Product product, BigDecimal price, int quantity, BigDecimal value) {
         this.product = product;
@@ -64,8 +58,6 @@ public class Item {
         this.value = value;
     }
 
-
-
     @Id
     @GeneratedValue
     @NotNull
@@ -73,8 +65,6 @@ public class Item {
     public int getId() {
         return id;
     }
-
-
 
     @Column(name = "PRICE")
     public BigDecimal getPrice() {
@@ -94,8 +84,6 @@ public class Item {
     public void setId(int id) {
         this.id = id;
     }
-
-
 
     public void setPrice(BigDecimal price) {
         this.price = price;

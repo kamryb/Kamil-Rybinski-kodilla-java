@@ -14,5 +14,5 @@ import java.util.List;
 @Transactional
 @Repository
 public interface InvoiceDao extends CrudRepository<Invoice, Integer> {
-    //e List<Item> findByName(String name);
+
 }
