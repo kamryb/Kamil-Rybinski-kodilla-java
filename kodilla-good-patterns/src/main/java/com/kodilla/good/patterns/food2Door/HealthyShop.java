@@ -10,7 +10,7 @@ public class HealthyShop extends Supplier{
 
 
     @Override
-    public String process() {
+    public String process(Order order) {
         return "Process ready3";
     }
 

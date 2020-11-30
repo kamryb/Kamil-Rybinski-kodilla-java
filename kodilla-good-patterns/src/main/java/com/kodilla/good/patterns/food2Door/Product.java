@@ -18,15 +18,3 @@ public class Product {
     }
 }
 
-  // Supplier supplier = new Supplier(HealthyShop);
-  //  supplier.process();
-
-    //metoda process
-
-
-
-    //ewentualnie 2 opcja Supplier Factory
-    //rozszerza klase Supplier
-
-
-//}

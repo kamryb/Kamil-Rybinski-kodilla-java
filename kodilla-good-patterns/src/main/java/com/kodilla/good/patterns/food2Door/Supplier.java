@@ -4,7 +4,7 @@ public abstract class Supplier {
     public String suppInfo;
     public Double prodQuantity;
     public  String prodType;
-    private Boolean executed=false;
+
 
 
 
@@ -14,7 +14,7 @@ public abstract class Supplier {
         this.prodType = prodType;
     }
 
-    public abstract String process();
+    public abstract String process(Order order);
 
 
     public String getSuppInfo() {
