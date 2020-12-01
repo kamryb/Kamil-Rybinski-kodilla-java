@@ -1,7 +1,7 @@
 package com.kodilla.good.patterns.airport;
 
-
 import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class FlightService {
@@ -10,10 +10,9 @@ public class FlightService {
     private Flight flight2 = new Flight("LosAngeles", "Berlin");
     private Flight flight3 = new Flight("London", "New");
     private Flight flight4 = new Flight("Madrit", "Lodz");
-    HashSet<Flight> flights = new HashSet<>();
-    private Object HashSet;
+    private Set<Flight> flights = new HashSet<>();
 
-    public HashSet<Flight> getFlights(){
+    public Set<Flight> getFlights(){
         flights.add(flight1);
         flights.add(flight2);
         flights.add(flight3);
@@ -21,44 +20,22 @@ public class FlightService {
         return flights;
     }
 
-    public HashSet<Flight> findDeparture(String city){
-        return (HashSet<Flight>) getFlights().stream()
-                .filter(f->f.getDeparture().equals(city))
+    public Set<Flight> findDeparture(String city){
+        return getFlights().stream()
+                .filter(f -> f.getDeparture().equals(city))
                 .collect(Collectors.toSet());
-               //.forEach(System.out::println);
-
     }
-    public HashSet<Flight> findArrival(String city){
-        return (HashSet<Flight>) getFlights().stream()
+
+    public Set<Flight> findArrival(String city){
+        return getFlights().stream()
                 .filter(f->f.getArrival().equals(city))
-                .collect(Collectors.toSet());
-        //.forEach(System.out::println);
-
+              .collect(Collectors.toSet());
     }
 
-   // public HashSet<Flight> findOtherAirport(String city) {
-      //  (HashSet<Flight>) getFlights().stream()
+    public  String beetweenF(String city3){
+        String otherAirportSearch1 = findDeparture(city3).toString();
+        String otherAirportSearch2 = findArrival(city3).toString();
+         return "Other search beetwen "  + city3 + ": " + otherAirportSearch1 + " -- " + otherAirportSearch2 ;
 
-
-
-
-
-      /* return (HashSet<Flight>) getFlights().stream()
-                .filter(two -> getFlights().stream().
-                        .anyMatch((f->f.getDeparture().equals(city))&&(two.g)))
-
-                        .collect(Collectors.toSet());
-           }
-
-*/
-
-
-    //      flights.stream()
-  //              .filter(f->f.getArrival().equals("Wawa"))
-  //          .filter(f->f.getDepartment().equals("Los"))
-  //          .collect(Collectors.toSet())
-  //          .forEach(System.out::println);
-
-
-
+    }
 }

@@ -10,7 +10,6 @@ public class Flight {
         this.arrival = arrival;
     }
 
-
     public String getArrival() {
         return arrival;
     }
@@ -18,7 +17,6 @@ public class Flight {
     public String getDeparture() {
         return departure;
     }
-
 
     public void setArrival(String arrival) {
         this.arrival = arrival;

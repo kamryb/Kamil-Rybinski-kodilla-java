@@ -1,7 +1,5 @@
 package com.kodilla.good.patterns.airport;
 
-import java.util.HashSet;
-import java.util.stream.Collectors;
 
 public class Application {
 
@@ -17,7 +15,6 @@ public class Application {
 
         System.out.println("Departure to city " + city1 + " --conection:" + departureSearch);
 
-
         String city2 = "Berlin";
 
         String arrivalSearch = flightService.findArrival(city2).toString();
@@ -26,14 +23,8 @@ public class Application {
 
         String city3 = "LosAngeles";
 
-        String otherAirportSearch1 = flightService.findDeparture(city3).toString();
-        String otherAirportSearch2 = flightService.findArrival(city3).toString();
-
-        System.out.println("Other search beetwen "  + city3 + ": " + otherAirportSearch1 + " -- " + otherAirportSearch2 );
-
+        System.out.println(flightService.beetweenF(city3));
 
     }
-
-
 
 }
