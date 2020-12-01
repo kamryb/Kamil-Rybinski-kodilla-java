@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 
 public class FlightService {
 
-    Flight flight1 = new Flight("Moskwa", "LosAngeles");
-    Flight flight2 = new Flight("LosAngeles", "Berlin");
-    Flight flight3 = new Flight("London", "New");
-    Flight flight4 = new Flight("Madrit", "Lodz");
+    private Flight flight1 = new Flight("Moskwa", "LosAngeles");
+    private Flight flight2 = new Flight("LosAngeles", "Berlin");
+    private Flight flight3 = new Flight("London", "New");
+    private Flight flight4 = new Flight("Madrit", "Lodz");
     HashSet<Flight> flights = new HashSet<>();
     private Object HashSet;
 

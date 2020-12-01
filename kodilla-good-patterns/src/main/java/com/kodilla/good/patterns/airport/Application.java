@@ -12,20 +12,24 @@ public class Application {
 
         FlightService flightService = new FlightService();
 
-        String departureSearch = flightService.findDeparture("Madrit").toString();
+        String city1 = "Madrit";
+        String departureSearch = flightService.findDeparture(city1).toString();
 
-        System.out.println("Departure search: " + departureSearch);
-
-        String arrivalSearch = flightService.findArrival("Berlin").toString();
-
-        System.out.println("Arrival search: " + arrivalSearch);
+        System.out.println("Departure to city " + city1 + " --conection:" + departureSearch);
 
 
+        String city2 = "Berlin";
 
-        String otherAirportSearch1 = flightService.findDeparture("LosAngeles").toString();
-        String otherAirportSearch2 = flightService.findArrival("LosAngeles").toString();
+        String arrivalSearch = flightService.findArrival(city2).toString();
 
-        System.out.println("Other search beetwen LosAngeles: " + otherAirportSearch1 + " ----- " + otherAirportSearch2 );
+        System.out.println("Arrival from city : " + city2 + " --connection:"   + arrivalSearch);
+
+        String city3 = "LosAngeles";
+
+        String otherAirportSearch1 = flightService.findDeparture(city3).toString();
+        String otherAirportSearch2 = flightService.findArrival(city3).toString();
+
+        System.out.println("Other search beetwen "  + city3 + ": " + otherAirportSearch1 + " -- " + otherAirportSearch2 );
 
 
     }
