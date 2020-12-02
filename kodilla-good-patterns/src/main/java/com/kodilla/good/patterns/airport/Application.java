@@ -11,19 +11,20 @@ public class Application {
         FlightService flightService = new FlightService();
 
         String city1 = "Madrit";
-        String departureSearch = flightService.findDeparture(city1).toString();
+        String departureSearch = flightService.findDeparture(city1);
 
-        System.out.println("Departure to city " + city1 + " --conection:" + departureSearch);
+        System.out.println(departureSearch);
+
 
         String city2 = "Berlin";
 
-        String arrivalSearch = flightService.findArrival(city2).toString();
+        String arrivalSearch = flightService.findArrival(city2);
+        System.out.println(arrivalSearch);
 
-        System.out.println("Arrival from city : " + city2 + " --connection:"   + arrivalSearch);
-
-        String city3 = "LosAngeles";
-
-        System.out.println(flightService.beetweenF(city3));
+        String cityM = "LosAngeles";
+        String cityEnd = "Moskwa";
+        String middleSearch = flightService.beetweenF3(city2, cityM, cityEnd);
+        System.out.println(middleSearch);
 
     }
 

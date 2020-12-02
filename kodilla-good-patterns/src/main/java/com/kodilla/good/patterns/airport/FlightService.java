@@ -20,22 +20,35 @@ public class FlightService {
         return flights;
     }
 
-    public Set<Flight> findDeparture(String city){
-        return getFlights().stream()
+    public String findDeparture(String city){
+        Set<Flight> fD =  getFlights().stream()
                 .filter(f -> f.getDeparture().equals(city))
                 .collect(Collectors.toSet());
+        return "dep city: " + city+ " - flight --> " + fD.toString();
     }
 
-    public Set<Flight> findArrival(String city){
-        return getFlights().stream()
+    public String findArrival(String city){
+        Set<Flight> fA = getFlights().stream()
                 .filter(f->f.getArrival().equals(city))
               .collect(Collectors.toSet());
+        return "arr city: " + city+ " - flight <-- " + fA.toString();
     }
 
     public  String beetweenF(String city3){
         String otherAirportSearch1 = findDeparture(city3).toString();
         String otherAirportSearch2 = findArrival(city3).toString();
          return "Other search beetwen "  + city3 + ": " + otherAirportSearch1 + " -- " + otherAirportSearch2 ;
+
+    }
+    
+    public String beetweenF3(String cityIn, String cityMd, String cityEn){
+        Set<Flight> flight1 = getFlights().stream()
+                .filter(f->f.getArrival().equals(cityIn) && f.getDeparture().equals(cityMd))
+                .collect(Collectors.toSet());
+        Set<Flight> flight2 = getFlights().stream()
+                .filter(f->f.getArrival().equals(cityMd) && f.getDeparture().equals(cityEn))
+                .collect(Collectors.toSet());
+        return  "Start flight: " + flight1.toString() + " + middle flight " + flight2.toString();
 
     }
 }
